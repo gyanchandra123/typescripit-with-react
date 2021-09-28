@@ -8,6 +8,9 @@ import Status from "./components/Status";
 import Heading from "./components/Heading";
 import OuterComp from "./components/OuterComp";
 import InnerComp from "./components/InnerComp";
+import Button from "./components/Button";
+import Input from "./components/Input";
+import Container from "./components/Container";
 
 function App() {
   //object
@@ -33,9 +36,24 @@ function App() {
 
       <OuterComp>
         <InnerComp>this is inner comp content</InnerComp>
-      </OuterComp> */}
+      </OuterComp> 
+       <Greet name="gyanchan"  isLogin={true}></Greet>
 
-      <Greet name="gyanchan"  isLogin={true}></Greet>
+      <Button
+        handleClick={(event, id) => {
+          console.log(`the employee details are send with ${id}`, event);
+        }}
+      ></Button>
+      <Input
+        inputvalue=""
+        handleChange={(even) => {
+          console.log("this is from the input even", even);
+        }}
+      ></Input>*/}
+
+      <Container
+        styles={{ color: "blue", border: "2px solid black",padding:'1rem' }}
+      ></Container>
     </div>
   );
 }
