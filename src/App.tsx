@@ -4,6 +4,10 @@ import "./App.css";
 import { Greet } from "./components/Greet";
 import Person from "./components/Person";
 import PersonList from "./components/PersonList";
+import Status from "./components/Status";
+import Heading from "./components/Heading";
+import OuterComp from "./components/OuterComp";
+import InnerComp from "./components/InnerComp";
 
 function App() {
   //object
@@ -21,9 +25,17 @@ function App() {
 
   return (
     <div className="App">
-      <Greet name="gyanchan" messageCount={10} isLogin={false}></Greet>
+      {/* <Greet name="gyanchan" messageCount={10} isLogin={false}></Greet>
       <Person name={personName}></Person>
       <PersonList allNames ={nameList}></PersonList>
+       <Status status='success'></Status> 
+        <Heading>this is the heading content</Heading>
+
+      <OuterComp>
+        <InnerComp>this is inner comp content</InnerComp>
+      </OuterComp> */}
+
+      <Greet name="gyanchan"  isLogin={true}></Greet>
     </div>
   );
 }
