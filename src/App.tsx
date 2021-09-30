@@ -11,6 +11,8 @@ import InnerComp from "./components/InnerComp";
 import Button from "./components/Button";
 import Input from "./components/Input";
 import Container from "./components/Container";
+import { ThemeContextProvider } from "./components/context/ThemeContext";
+import Box from "./components/context/Box";
 
 function App() {
   //object
@@ -49,13 +51,21 @@ function App() {
         handleChange={(even) => {
           console.log("this is from the input even", even);
         }}
-      ></Input>*/}
+      ></Input>
 
       <Container
         styles={{ color: "blue", border: "2px solid black",padding:'1rem' }}
-      ></Container>
+      ></Container>*/}
+
+      <ThemeContextProvider>
+          <Box></Box>
+      </ThemeContextProvider>
+
+  
+
     </div>
   );
+ 
 }
 
 export default App;
